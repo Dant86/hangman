@@ -15,6 +15,7 @@ while True:
     while amt_guesses > 0:
         letter = ""
         while len(letter) != 1 or letter in guessed:
+            print("You have {} incorrect guesses left.".format(amt_guesses))
             letter = input("Guess a letter: ")
             if letter in guessed:
                 print("Whoops! Looks like you already guessed that.")
