@@ -1,10 +1,12 @@
 from nltk.corpus import words
 from random import randrange
 
+corpus = [word for word in words.words() if len(word) <= 10]
+
 while True:
     response = ""
-    index = randrange(len(words.words()))
-    word = words.words()[index].lower()
+    index = randrange(len(corpus))
+    word = corpus[index].lower()
     length = len(word)
     curr = (["_" for i in range(length)])
     print("The word has {} letters in it. Good luck!".format(length))
